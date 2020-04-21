@@ -26,7 +26,7 @@ The browser object model (BOM) is a hierarchy of browser objects that are used t
 
 - top-level object in the browser
 
-- [window object](https://codesandbox.io/s/quirky-golick-kmcpt)
+- [window object exercise](https://codesandbox.io/s/quirky-golick-kmcpt)
 
 ```js
 window.innerHeight;
@@ -46,7 +46,7 @@ window.history.forward();
 
 #### Navigator Object
 
-- [Navigator Object](https://codesandbox.io/s/misty-wood-xpfxv)
+- [Navigator Object Exercise](https://codesandbox.io/s/misty-wood-xpfxv)
 
 ```js
 navigator.userAgent;
@@ -83,7 +83,7 @@ Source: wikipedia - https://en.wikipedia.org/wiki/Document_Object_Model
 
 - The DOM can be manipulating the DOM with JavaScript
 
-- [Manipulating the DOM](https://codesandbox.io/s/hardcore-sea-w9kjn)
+- [Manipulating the DOM exercise](https://codesandbox.io/s/hardcore-sea-w9kjn)
 
 ### document methods to find DOM elements
 
@@ -211,10 +211,10 @@ It makes things much simpler:
 
 ### DOM Traversal with jQuery
 
-- [Aliens Demo](https://codesandbox.io/s/dreamy-glitter-tqhnz?file=/README.md)
+- [Aliens Demo Exercise](https://codesandbox.io/s/dreamy-glitter-tqhnz?file=/README.md)
 
 ### Create HTML Dynamically
 
 - Create HTML Dynamically with jQuery
 
-- [Pet Demo](https://codesandbox.io/s/happy-raman-m5l67)
+- [Pet Demo Exercise](https://codesandbox.io/s/happy-raman-m5l67)
