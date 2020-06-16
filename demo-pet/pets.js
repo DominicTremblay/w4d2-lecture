@@ -21,8 +21,40 @@ const pets = [
     age: 2,
   },
 ];
+
+const createArticle = (petObj) => {
+  // Create an article element based off this template
+  //   <article>
+  //   <header>
+  //     <h2>Dingo</h2>
+  //   </header>
+  //   <div class="content">
+  //     <ul>
+  //       <li><span>Species: </span>dog</li>
+  //       <li><span>Age: </span>1</li>
+  //     </ul>
+  //   </div>
+  //   <footer>Dingo is a dog and is 1 years old</footer>
+  // </article>
+
+  const article = `<article>
+  <header>
+    <h2>${petObj.name}</h2>
+  </header>
+  <div class="content">
+    <ul>
+      <li><span>Species: </span>${petObj.type}</li>
+      <li><span>Age: </span>${petObj.age}</li>
+    </ul>
+  </div>
+  <footer>${petObj.name} is a ${petObj.type} and is ${petObj.age} years old</footer>
+</article>`;
+
+  return article;
+};
+
 // Create an article element using an animal object
-const createElement = animalObj => {
+const createElement = (animalObj) => {
   // HTML templage we need to recreate
 
   // <article>
@@ -49,9 +81,7 @@ const createElement = animalObj => {
   const $header = $('<header>');
 
   // Create and add an H2 element to the header
-  $('<h2>')
-    .text(animalObj.name)
-    .appendTo($header);
+  $('<h2>').text(animalObj.name).appendTo($header);
 
   // Add the header to the article
   $article.append($header);
@@ -66,9 +96,7 @@ const createElement = animalObj => {
   const $speciesLi = $('<li>');
 
   // creating the span element and adds it to the species li
-  $('<span>')
-    .text('Species: ')
-    .appendTo($speciesLi);
+  $('<span>').text('Species: ').appendTo($speciesLi);
 
   // adding the species to the li
   $speciesLi.append(` ${animalObj.type}`);
@@ -77,9 +105,7 @@ const createElement = animalObj => {
   const $ageLi = $('<li>');
 
   // creating the age span and adds it to the age li element
-  $('<span>')
-    .text('age: ')
-    .appendTo($ageLi);
+  $('<span>').text('age: ').appendTo($ageLi);
 
   // adds the age
   $ageLi.append(` ${animalObj.age}`);
@@ -106,12 +132,12 @@ const createElement = animalObj => {
 
 // loop through the array of animal objects and create an
 // article element out of each object and appends it to the page section
-const renderElements = petsArr => {
+const renderElements = (petsArr) => {
   $.each(petsArr, (index, animalObj) => {
-    $('.pets-container').append(createElement(animalObj));
+    $('.pets-container').append(createArticle(animalObj));
   });
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   renderElements(pets);
 });
