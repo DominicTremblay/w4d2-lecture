@@ -4,6 +4,7 @@
 
 - Browser Object Model
 - Document Object Model
+- Demo create dynamtic HTML
 
 ### BOM
 
