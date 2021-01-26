@@ -5,4 +5,5 @@ $(document).ready(function() {
 
     $talkP.append('💬');
   });
+
 }); // document ready

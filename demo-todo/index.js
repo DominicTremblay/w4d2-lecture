@@ -1,42 +1,49 @@
+// Detect the submit of the form
 
-// Add a submit event listener on the form
+const frm = document.querySelector("#new-todo-frm");
 
-
-const form = document.getElementById("new-todo-frm");
-
-form.addEventListener("submit", function(event) {
+frm.addEventListener("submit", function(event) {
+  // preventing the submission of the form
   event.preventDefault();
-  // get the content of the input box
-  const newTodo = this.elements.todo;
+  // Expecting the 'this' to be the form element
+  // Extract the text content from the input box
+  // using the elements collection on the form
+  const todoInput = this.elements.todo;
+  const todoContent = todoInput.value;
+  // create a new <li> with the text content of that input box
+  const newLi = document.createElement("li");
+  newLi.textContent = todoContent + " ";
 
-  // create a new list item element with a delete button
+  // targetting the list of todos (ul)
+  // target the ul on the page and add the newLi to it
+  const todoList = document.querySelector("#todos");
 
-  const li = document.createElement("li");
-  li.textContent = `${newTodo.value} `;
-
+  // Create a button and add it to the <li> element
   const delBtn = document.createElement("button");
-  delBtn.textContent = "Delete";
-
-  // Add the delete button to the li
-
-  li.appendChild(delBtn);
-
-  // add the new li to the ul of todos
-  const todoList = document.getElementById("todos");
-
-  todoList.appendChild(li);
-
-  // reset the input box
-  newTodo.value = "";
-
-  // add an event listener on the delete button
-  // puts back the focus on the new todo input
+  delBtn.textContent = "X";
+  // adding an event listener for the click on the delete button
 
   delBtn.addEventListener("click", function(event) {
-    todoList.removeChild(li);
-    newTodo.focus();
+    // remove the child from the ul
+    // todoList.removeChild(newLi);
+
+    // this is preferred way
+    todoList.removeChild(this.parentElement);
   });
+
+  // add the button to the new li
+  newLi.appendChild(delBtn);
+
+  // Add the new li to the ul
+  todoList.appendChild(newLi);
+
+  // reset the text content of the input text
+  todoInput.value = "";
 });
+
+
+
+
 
 // Manipulating documents Documentation
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
