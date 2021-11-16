@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles.css">
+  <title>Chatty App</title>
+</head>
+
+<body>
+
+  <section id='container'>
+
+    <aside id='chat-sidebar'>
+      <div class="user-search">
+        <form id='user-search-form'>
+          <i id='search-icon' class="fas fa-search"></i>
+          <input type='search' name='user-search' id='user-search-box' placeholder='Search' results=3 />
+        </form>
+      </div>
+      <div class="user-list">
+
+        <p>3 users online</p>
+
+        <p>
+          <img class="chat-message-img" src="https://i.imgur.com/nlhLi3I.png" alt="bobby's picture" /> Bobby (you)
+        </p>
+
+        <p>
+          <img class="chat-message-img" src="https://i.imgur.com/z5LNkkB.png" alt="bobba's picture"> Bobba
+        </p>
+
+        <p>
+          <img class="chat-message-img" src="https://i.imgur.com/73hZDYK.png" alt="bob's picture"> Bob
+        </p>
+
+      </div>
+    </aside>
+
+    <div id="chat-container">
+      <header id='chat-header'>
+        <div id="chat-logo">
+          chatty
+        </div>
+
+        <div id="chat-avatar">
+          <div>
+            <img id="chat-avatar-img" src="https://i.imgur.com/nlhLi3I.png" alt="bobby's picture">
+          </div>
+          <div id="chat-username">Bobby</div>
+          <div><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        </div>
+      </header>
+      <div class="chat-main-container">
+
+        <main id='chat-messages'>
+
+          <article class='chat-message'>
+            <header class="chat-message-header">
+              <div class="chat-message-user">
+                <div class="chat-message-avatar">
+
+                  <img class="chat-message-img" src="https://i.imgur.com/nlhLi3I.png" alt="bobby's picture" />
+
+                </div>
+                <div class="chat-message-username">
+                  Bobby
+                </div>
+              </div>
+              <div class="chat-message-time">
+                15 minutes ago
+              </div>
+            </header>
+
+            <div class="chat-message-body">
+              <textarea class='chat-message-content' readonly>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quisquam quia debitis nam dolorem quidem vel veritatis nihil a magni, pariatur harum facilis! Quisquam atque praesentium voluptatum accusamus voluptate aut?
+              </textarea>
+            </div>
+
+          </article>
+
+          <article class='chat-message'>
+            <header class="chat-message-header">
+              <div class="chat-message-user">
+                <div class="chat-message-avatar">
+
+                  <img class="chat-message-img" src="https://i.imgur.com/z5LNkkB.png" alt="bobba's picture">
+
+                </div>
+                <div class="chat-message-username">
+                  Bobba
+                </div>
+              </div>
+              <div class="chat-message-time">
+                12 minutes ago
+              </div>
+            </header>
+
+            <div class="chat-message-body">
+              <textarea class='chat-message-content' readonly>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quisquam quia debitis nam dolorem quidem vel veritatis nihil a magni, pariatur harum facilis! Quisquam atque praesentium voluptatum accusamus voluptate aut?
+              </textarea>
+            </div>
+
+          </article>
+
+          <article class='chat-message'>
+            <header class="chat-message-header">
+              <div class="chat-message-user">
+                <div class="chat-message-avatar">
+
+                  <img class="chat-message-img" src="https://i.imgur.com/73hZDYK.png" alt="bob's picture">
+
+                </div>
+                <div class="chat-message-username">
+                  Bob
+                </div>
+              </div>
+              <div class="chat-message-time">
+                10 minutes ago
+              </div>
+            </header>
+
+            <div class="chat-message-body">
+              <textarea class='chat-message-content' readonly>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque quisquam quia debitis nam dolorem quidem vel veritatis nihil a magni, pariatur harum facilis! Quisquam atque praesentium voluptatum accusamus voluptate aut?
+              </textarea>
+            </div>
+
+          </article>
+
+        </main>
+        <footer id='chat-box'>
+          <form>
+            <div class="chat-box-input-container">
+              <input type="text" name="chat-box-input" id="chat-box-input">
+            </div>
+            <div class="chat-box-send">
+              <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/0.5.12/MinFaker.js"
+    integrity="sha512-+qHsuYJbatsUfmvRdKj5xyKJO1othF3ZeK/X6ap2pNJrHYtSdrNmZFTisz79wr+ddh1XIJs3EpsISWYkJEguwQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
