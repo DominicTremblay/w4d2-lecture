@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lusitana&family=Raleway:wght@800&family=Source+Sans+Pro:wght@300;400&family=Space+Grotesk:wght@700&display=swap');
+:root {
+  /* CSS HEX */
+  --red-salsa: #f94144ff;
+  --orange-red: #f3722cff;
+  --yellow-orange-color-wheel: #f8961eff;
+  --mango-tango: #f9844aff;
+  --maize-crayola: #f9c74fff;
+  --pistachio: #90be6dff;
+  --zomp: #43aa8bff;
+  --cadet-blue: #4d908eff;
+  --queen-blue: #577590ff;
+  --cg-blue: #277da1ff;
+  /* https://coolors.co/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1 */
+
+  --username-font: 'Raleway', Helvetica, Arial, sans-serif;
+  --message-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  --message-weight: 300;
+  --time-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  --time-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--message-font);
+}
+
+#container {
+  display: flex;
+  background-color: Gainsboro;
+  padding: 1.5rem;
+  border: 1px solid darkgray;
+  width: 60%;
+  margin: 0 auto;
+}
+
+div#chat-container {
+  flex-basis: 80%;
+  background-color: white;
+  padding: 1rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+.chat-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 72vh;
+}
+
+#chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  margin-bottom: 1rem;
+}
+section #chat-avatar {
+  display: flex;
+  align-items: center;
+}
+
+section #chat-avatar * {
+  margin: 0.3rem;
+}
+
+section #chat-logo {
+  font-size: 2rem;
+  font-family: 'Space Grotesk', helvetica, arial, sans-serif;
+  color: var(--mango-tango);
+}
+
+#chat-header #chat-avatar-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid var(--cg-blue);
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+#chat-header #chat-username {
+  font-family: var(--username-font);
+  font-size: 1.5rem;
+  color: var(--cg-blue);
+}
+
+article.chat-message {
+  padding: 0.3rem;
+}
+
+.chat-message .chat-message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-message .chat-message-user {
+  display: flex;
+}
+
+.chat-message .chat-message-username {
+  font-family: var(--username-font);
+  font-size: 1.2rem;
+  color: var(--zomp);
+}
+
+.chat-message .chat-message-img {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--pistachio);
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin-right: 1rem;
+}
+
+.chat-message .chat-message-body {
+  padding: 1rem 0;
+}
+
+.chat-message .chat-message-content {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  font-family: var(--message-font);
+  font-weight: var(--message-weight);
+  font-size: 1.2rem;
+}
+
+.chat-message .chat-message-time {
+  font-family: var(--time-font);
+  font-weight: var(--time-weight);
+  color: darkgray;
+}
+
+#chat-box form {
+  display: flex;
+  justify-content: center;
+  box-shadow: 3px 5px 5px darkgray;
+}
+
+#chat-box .chat-box-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#chat-box .chat-box-send button {
+  background-color: var(--maize-crayola);
+  padding: 0.2rem 0.8rem;
+  border: none;
+  height: 100%;
+}
+
+#chat-box-input {
+  flex-grow: 1;
+  appearance: none;
+  border: none;
+  border: 2px solid var(--maize-crayola);
+  line-height: 1.1rem;
+  /* border-color: var(--maize-crayola); */
+}
+
+#chat-sidebar {
+  flex-basis: 20%;
+  background-color: silver;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+#user-search-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+#search-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+#user-search-box {
+  border-radius: 15px;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid grey;
+  padding: 0.1rem 0.5rem 0.1rem 2rem;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+
+.user-list p:first-child {
+  background-color:inherit;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.user-list p {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid silver;
+  background-color: lightgray;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.user-list p img {
+  width: 2rem;
+  margin: 0.5rem;
+}
+/* #clear-search-icon {
+  position: absolute;
+
+  cursor: pointer;
+  top: 0.5rem;
+  right: 0.5rem;
+} */
