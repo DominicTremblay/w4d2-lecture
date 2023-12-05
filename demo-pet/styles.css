@@ -8,8 +8,8 @@ body {
   align-items: center;
 }
 
-article {
-  border: 1px solid steelblue;
+.pet-item {
+  border: 1px solid rgb(180, 99, 70);
   margin: 1rem; 
   border-radius: 10px;
   overflow: hidden;
@@ -18,7 +18,7 @@ article {
 }
 
 article header, article h2 {
-  color: slateblue;
+  color: rgb(29, 27, 37);
   padding: 0.5rem;
   margin: 0;
   background-color: lightblue;
