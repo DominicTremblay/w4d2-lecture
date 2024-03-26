@@ -3,22 +3,32 @@
   <head>
     <title>My List of Todos</title>
     <meta charset="UTF-8" />
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+
+    <script src="./app_jquery.js"></script>
+
   </head>
 
   <body>
     <h1>My list of todos</h1>
-
     <div>
       <form id="new-todo-frm">
         <label for="todo">Enter a new todo:</label>
-        <input class="todos" type="text" name="todo" id="todo" />
+        <input class="todos" type="text" name="todo" />
         <input type="submit" value="Add Todo" />
       </form>
     </div>
 
-    <!-- list of todos -->
-    <ul id="todos"></ul>
 
-    <script src="./app.js"></script>
+    <!-- list of todos -->
+    <ul id="todos">
+
+    </ul>
+
+    <!-- <script src="./app.js"></script> -->
   </body>
 </html>
